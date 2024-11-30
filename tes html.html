@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Saya</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #2a4030;
+            color: white;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: beige;
+            color: black;
+            border-radius: 100px;
+        }
+        img {
+            display: block;
+            margin: 20px auto;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+        section {
+            margin-top: 20px;
+            text-align: center;
+            display: none; 
+        }
+        section.active {
+            display: block; 
+        }
+        ul {
+            margin: 20px auto;
+            padding: 0;
+            list-style-type: none;
+        }
+        li {
+            margin: 5px 0;
+            font-size : 14px ;
+        }
+        section a {
+            color: beige;
+            text-decoration: none;
+            font-size : 14px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #777;
+        }
+        footer a {
+            color: #ffc107;
+            text-decoration: none;
+        }
+        
+        .next-btn {
+            background-color: #ffc107;
+            border: none;
+            padding: 10px 20px;
+            color: black;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .next-btn:hover {
+            background-color: #e6a900;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>PROFIL WULAN</h1>
+    </header>
+
+    <section class="active">
+        <img src="C:\Users\ASUS TUF\Pictures\Gambar WhatsApp 2024-11-01 pukul 17.45.34_f3dd8ca9.jpg" alt="Foto Profil">
+        <h2>Halo, saya Wulan</h2>
+        <p>Saya adalah seorang mahasiswa Universitas Udayana.</p>
+    </section>
+
+    <section>
+        <h3>Media Sosial</h3>
+        <ul>
+            <li><a href="https://www.instagram.com/wulan_apriyantii" target="_blank">Instagram Saya</a></li>
+            <li><a href="https://www.wa.me/08136337174" target="_blank">WhatsApp Saya</a></li>
+        </ul>
+    </section>
+
+    <section>
+        <h4>Bakat dan Minat</h4>
+        <ul>
+            <li>Public Speaking</li>
+            <li>Leadership</li>
+            <li>Menabuh</li>
+        </ul>
+    </section>
+
+    <section>
+        <h5>Makanan dan Minuman Favorit</h5>
+        <p>Babi Guling</p>
+        <p>McFlurry McD</p>
+        <p>Matcha Ice</p>
+        <p>Es Teh</p>
+    </section>
+
+    <footer>
+        <p>Hubungi saya di: <a href="mailto:wulanapriyanti977@gmail.com">wulanapriyanti977@gmail.com</a></p>
+        <p>&copy; 2024 Profil Saya</p>
+    </footer>
+
+    
+    <button class="next-btn" onclick="nextSlide()">Next</button>
+
+    <script>
+        
+        const sections = document.querySelectorAll('section');
+        let currentIndex = 0; 
+
+        function nextSlide() {
+            sections[currentIndex].classList.remove('active');
+            currentIndex++;
+
+            if (currentIndex >= sections.length) {
+                currentIndex = 0;
+            }
+            sections[currentIndex].classList.add('active');
+        }
+    </script>
+</body>
+</html> 
